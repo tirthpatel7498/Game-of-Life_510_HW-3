@@ -21,7 +21,7 @@ func generateInitialPopulation(cols int, rows int, propability float64, generati
 func generate(currentGeneration int, cols int, rows int, generation []int) []int {
 	homeScreen()
 	fmt.Printf("Current generation %d\n", currentGeneration)
-	next := generation
+	next := make([]int, len(generation))
 	for i := 0; i < len(generation); i++ {
 		if !isCell(cols, rows, i) {
 			if right(cols, i) {
@@ -37,10 +37,10 @@ func generate(currentGeneration int, cols int, rows int, generation []int) []int
 		neighbors := neighbors(cols, generation, i)
 		if generation[i] == 0 && neighbors == 3 {
 			// birth
-			next[i] = 1
+			generation[i] = 1
 		} else if generation[i] == 1 && (neighbors > 3 || neighbors < 2) {
 			// over-crowding or lonely - dies
-			next[i] = 0
+			generation[i] = 0
 		}
 	}
 	return next
@@ -98,7 +98,7 @@ func main() {
 
 	for *generations > 0 {
 		currentGeneration++
-		*generations = *generations - 1
+		*generations--
 		generation = generate(currentGeneration, *cols, *rows, generation)
 		fmt.Scanln() // wait for Enter Key
 	}
