@@ -16,7 +16,7 @@ make build
 This will generate a `main` executable that you run via `./main`. It has the following configuration properties:
 
 ```bash
-./main -rows=<number-of-rows> -cols=<number-of-cols> -generations=<number-of-generations-to-create> -initial=<decimal-of-the-probability-a-cell-alive-on-first-generation>
+./main -rows=<number-of-rows> -cols=<number-of-cols> -generations=<number-of-generations-to-create> -propability=<decimal-of-the-probability-a-cell-alive-on-first-generation>
 ```
 
 You can also use `./main -h`
@@ -28,7 +28,7 @@ make run
 
 This will run the program as if run via the following command
 ```bash
-./main -rows=40 -cols=40 -generations=200 -initial=.619
+./main -rows=40 -cols=40 -generations=200 -propability=.619
 ```
 
 
