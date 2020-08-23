@@ -1,6 +1,6 @@
 # Game-of-Life_510_HW-3
 
-# Coding the famous Conway's Game-of-Life in 3 Languages! 
+## Coding the famous Conway's Game-of-Life in 3 Languages! 
  
   1. Golang
   2. Lua
