@@ -85,17 +85,29 @@ do
 
 
 end
-local life = Life:createTable(7,7)
+local life = Life:createTable(10,10)
 
 life:setLife(3,3)
 life:setLife(1,2)
+life:setLife(1,4)
+life:setLife(5,5)
 life:setLife(2,3)
 life:setLife(3,1)
 life:setLife(3,2)
+life:setLife(5,2)
+life:setLife(6,2)
+life:setLife(5,6)
+life:setLife(6,6)
+life:setLife(7,7)
 
 
-life:print_matrix(7,7)
 
-life:moveToNewGen()
+life:print_matrix(10,10)
+gen = 1
+while(gen < 50) do
+    --io.write(gen)
+    life:moveToNewGen()
+    gen = gen+1
+end
 
-life:print_matrix(7,7)
+life:print_matrix(10,10)
