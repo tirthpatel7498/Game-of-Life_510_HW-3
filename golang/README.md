@@ -32,3 +32,6 @@ This will run the program as if run via the following command
 ```
 
 
+### Debugging
+To add a debug statement, you can use the `fmt.Printf()` command to print to the console. For more on how these statements get printed, take a look at the [documenation](https://gobyexample.com/string-formatting).
+
