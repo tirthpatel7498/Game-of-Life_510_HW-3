@@ -56,7 +56,34 @@ do
 			io.write('*')
 		end
 		print('')
-	end
+    end
+    
+    function Life:moveToNewGen()
+        --firstly we need to create a copy of the previous table because any changes to the original table may affect the individual cell outcomes...
+        local table2 = self.table
+        for i = 1, self.r do
+			for j = 1, self.c do
+				local s = 0
+				for p = i-1,i+1 do
+					for q = j-1,j+1 do
+						if p > 0 and p <= self.r and q > 0 and q <= self.c then
+							s = s + self.table[p][q]
+						end
+					end
+				end
+				s = s - self.table[i][j]
+				if s == 3 or (s+self.table[i][j]) == 3 then
+					table2[i][j] = 1
+				else
+					table2[i][j] = 0
+				end
+			end
+        end
+        local table = table2
+
+    end    
+
+
 end
 local life = Life:createTable(7,7)
 
@@ -66,5 +93,9 @@ life:setLife(2,3)
 life:setLife(3,1)
 life:setLife(3,2)
 
+
+life:print_matrix(7,7)
+
+life:moveToNewGen()
 
 life:print_matrix(7,7)
