@@ -1,19 +1,17 @@
 do 
-   --Create a table....Life
-    Life = {}
-    local metaTable = { __index = Life }
+   --Create a table....GOL
+    GOL = {}
+    local metaTable = { __index = GOL }
 
     -- Function to initially create a table...
-    function Life:createTable(r, c)
+    function GOL:createTable(r, c)
         local table = {}
-
         for i = 1, r do
 			local row = {}
 			for j = 1, c do
 				row[j] = 0
 			end
             table[i] = row
-            --io.write(table[i])
         end
         
         return setmetatable({
@@ -25,17 +23,11 @@ do
     end
 
     -- function to set the element to be "alive"....represented by "1"
-    function Life:setLife(x,y)
+    function GOL:setLife(x,y)
         self.table[x][y] = 1
     end
 
-    -- -- function to set the element to be "dead"....represented by "-"
-    -- function Life:unsetLife(x,y)
-    --     self.table[x][y] = 0
-    -- end
-
-
-    function Life:print_matrix()
+    function GOL:printTable()
 		local table = self.table
 		print('')
 		for i = 1, self.r do
@@ -53,7 +45,7 @@ do
 		print('')
     end
     
-    function Life:moveToNewGen()
+    function GOL:moveToNewGen()
         --firstly we need to create a copy of the previous table because any changes to the original table may affect the individual cell outcomes...
 		local table2 = self.table
 		
@@ -61,10 +53,10 @@ do
         for i = 1, self.r do
 			for j = 1, self.c do
 				local numOfNeighbors = 0
-				for p = i-1,i+1 do
-					for q = j-1,j+1 do
-						if p > 0 and p <= self.r and q > 0 and q <= self.c then
-							numOfNeighbors = numOfNeighbors + self.table[p][q]
+				for r1 = i-1,i+1 do
+					for c1 = j-1,j+1 do
+						if r1 > 0 and r1 <= self.r and c1 > 0 and c1 <= self.c then
+							numOfNeighbors = numOfNeighbors + self.table[r1][c1]
 						end
 					end
 				end
@@ -84,8 +76,9 @@ do
 
 end
 
-local life = Life:createTable(17,17)
+local life = GOL:createTable(17,17)
 
+-- Setting up initial generation...
 life:setLife(2, 4);
 life:setLife(2, 5);
 life:setLife(2, 6);
@@ -136,15 +129,15 @@ life:setLife(14, 11);
 life:setLife(14, 12);
 
 
+-- Lets print out the next generations
 gen = 0
 io.write("Generation: ", gen, "\n")
-life:print_matrix()
+life:printTable()
 gen = gen+1
 while(gen <= 30) do
-    
 	life:moveToNewGen()
 	io.write("Generation: ", gen, "\n")
-	life:print_matrix()
+	life:printTable()
 	io.write("\n")
     gen = gen+1
 end
