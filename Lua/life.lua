@@ -29,20 +29,16 @@ do
         self.table[x][y] = 1
     end
 
-    -- function to set the element to be "dead"....represented by "-"
-    function Life:unsetLife(x,y)
-        self.table[x][y] = 0
-    end
+    -- -- function to set the element to be "dead"....represented by "-"
+    -- function Life:unsetLife(x,y)
+    --     self.table[x][y] = 0
+    -- end
 
 
     function Life:print_matrix()
 		local table = self.table
-		-- for i = 1, self.r+2 do
-		-- 	io.write('*')
-		-- end
 		print('')
 		for i = 1, self.r do
-			--io.write('*')
 			for j = 1, self.c do
 				if table[i][j] == 0 then
 					io.write('. ')
@@ -53,9 +49,7 @@ do
 			--print('*')
 			io.write('\n')
 		end	
-		-- for i = 1, self.r+2 do
-		-- 	io.write('*')
-		-- end
+		
 		print('')
     end
     
@@ -77,9 +71,9 @@ do
 				-- remove the current cell from numOfNeighbors
 				numOfNeighbors = numOfNeighbors - self.table[i][j]
 				if numOfNeighbors == 3 or (numOfNeighbors+self.table[i][j]) == 3 then
-					table2[i][j] = 1
+					table2[i][j] = 1 --1 represents live cell
 				else
-					table2[i][j] = 0
+					table2[i][j] = 0 --0 represents dead cell
 				end
 			end
         end
