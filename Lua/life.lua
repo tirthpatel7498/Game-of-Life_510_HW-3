@@ -53,24 +53,23 @@ do
         for i = 1, self.r do
 			for j = 1, self.c do
 				local numOfNeighbors = 0
-				for r1 = i-1,i+1 do
-					for c1 = j-1,j+1 do
-						if r1 > 0 and r1 <= self.r and c1 > 0 and c1 <= self.c then
+				for r1 = i,i+1 do --
+					for c1 = j,j+1 do --
+						if r1 <= self.r and c1 > 0 and c1 <= self.c then --
 							numOfNeighbors = numOfNeighbors + self.table[r1][c1]
 						end
 					end
 				end
 				-- remove the current cell from numOfNeighbors
 				numOfNeighbors = numOfNeighbors - self.table[i][j]
-				if numOfNeighbors == 3 or (numOfNeighbors+self.table[i][j]) == 3 then
+				if numOfNeighbors == 3 or (numOfNeighbors+self.table[i][j]) == 2 then
 					table2[i][j] = 1 --1 represents live cell
 				else
 					table2[i][j] = 0 --0 represents dead cell
 				end
 			end
         end
-        local table = table2
-
+        --
     end    
 
 
