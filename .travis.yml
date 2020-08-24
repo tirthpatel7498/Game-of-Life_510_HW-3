@@ -1,11 +1,10 @@
 matrix:
     include:
       - language: go
-        python: 
+        go: 
             - 1.14.x
         os:
             - linux
-        install: false
         script:
             - "cd golang"
             - "make install"
