@@ -3,7 +3,6 @@ This file deals with the usage of the Lua code written for the Game of Life
 to run the lua code on your computer, you will need to first install Lua.
 
 ## For macOS and Linux
-
 If using macOS or Linux, the best way is to use `HOMEBREW`
 
 To install Homebrew, simply copy and paste the code below in your terminal <br />
@@ -11,3 +10,8 @@ To install Homebrew, simply copy and paste the code below in your terminal <br /
 
 Once install, simply paste the code below to install Lua<br />
 `brew install lua`
+
+
+## Steps to run the file
+1. In terminal/cmd, go to the directory where you have saved the project.
+2. To run the .lua file, type `lua life.lua`
