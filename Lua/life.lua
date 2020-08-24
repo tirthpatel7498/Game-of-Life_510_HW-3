@@ -128,7 +128,6 @@ life:setLife(14, 10);
 life:setLife(14, 11);
 life:setLife(14, 12);
 
-
 -- Lets print out the next generations
 gen = 0
 io.write("Generation: ", gen, "\n")
