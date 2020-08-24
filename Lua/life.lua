@@ -136,7 +136,6 @@ life:setLife(14, 11);
 life:setLife(14, 12);
 
 
-
 gen = 0
 io.write("Generation: ", gen, "\n")
 life:print_matrix()
