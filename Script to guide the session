@@ -17,6 +17,7 @@ After cloning (it is advisable to create your separate branch for debugging purp
 How to run the code:
 	For go, please refer to the README.md in the golang directory. 
 	For dart, refer to the README.md file in the Dart directory.
+	For Lua, refer to the README.md file in the Lua directory.
 
 How to print debug statements:
 	For go, please refer to the README.md in the golang directory. 
