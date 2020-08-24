@@ -1,3 +1,3 @@
-module github.com/dangoslen/csc510_hw2/golang
+module github.com/tirthpatel7498/Game-of-Life_510_HW-3/golang
 
 go 1.14

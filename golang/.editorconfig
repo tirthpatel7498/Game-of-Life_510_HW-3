@@ -1,10 +1,9 @@
 # This is the project's root directory
-root = true
+root = false
 
 [*]
 indent_style = space
 indent_size = 2
 
-[{Makefile}]
-# Use spaces for indentation
+[Makefile]
 indent_style = tab
