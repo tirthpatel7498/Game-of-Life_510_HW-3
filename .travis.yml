@@ -7,5 +7,4 @@ matrix:
             - linux
         script:
             - "cd golang"
-            - "make install"
-            - "make test"
+            - "make build"
