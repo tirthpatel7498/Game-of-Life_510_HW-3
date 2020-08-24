@@ -8,6 +8,16 @@ You need to have `go` installed on your computer. See [go installation](https://
 
 After `go` is installed, you can use the `Makefile` included in this repository to build and run the application.
 
+### Install
+```bash
+make install
+```
+
+### Tests
+```
+make test
+```
+
 ### Building
 ```bash
 make build
@@ -19,7 +29,7 @@ This will generate a `main` executable that you run via `./main`. It has the fol
 ./main -rows=<number-of-rows> -cols=<number-of-cols> -generations=<number-of-generations-to-create> -propability=<decimal-of-the-probability-a-cell-alive-on-first-generation>
 ```
 
-You can also use `./main -h`
+You can also use `./main -h` to see all of the configuration properties
 
 ### Running
 ```bash
@@ -30,7 +40,6 @@ This will run the program as if run via the following command
 ```bash
 ./main -rows=40 -cols=40 -generations=200 -propability=.619
 ```
-
 
 ### Debugging
 To add a debug statement, you can use the `fmt.Printf()` command to print to the console. For more on how these statements get printed, take a look at the [documenation](https://gobyexample.com/string-formatting).
