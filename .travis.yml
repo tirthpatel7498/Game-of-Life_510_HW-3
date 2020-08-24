@@ -8,3 +8,8 @@ matrix:
         script:
             - "cd golang"
             - "make build"
+      - language: dart
+        dart:
+            - stable
+        script:
+            - dart Dart/gol_test.dart    
