@@ -25,7 +25,7 @@ The game starts with a random initial population, which will further evolve on i
 ## Usage
 After complete installation of Dart SDK,
 
-Open terminal or command-prompt and run the following command with proper arguements,
+Open terminal or command-prompt, navigate to the Dart directory and run the following command with proper arguements,
 	
     $ dart gol_v2.dart <rows> <columns> <generations>
 eg. For a game board of 5x5 for 5 generations,
@@ -34,6 +34,17 @@ eg. For a game board of 5x5 for 5 generations,
 
 ## Sample Output
 ![Output of original codes](output.gif)
+
+## Debugging Guidelines
+For debugging purposes,
+
+1. Install Dart SDK as per above guidelines.
+2. Clone this GitHub repo and navigate to the **Dart** directory.
+3. You will find the buggy_gol_v2.dart file in it, which is the buggy implementation of Game of Life.
+4. Make changes as per requirement or debug it and then run the file as per above **Usage** instructions.
+5. If "Test Passed" is displayed at the end of the execution in Terminal/CMD, Congrats! you have successfully debugged this file. If not, please try again.
+
+
 
 ## Making Contributions
 Please ensure you are abiding by our Code of Conduct and Contribution guidelines when making contributions to this repository.
