@@ -3,7 +3,7 @@ import 'dart:io';
 import 'dart:core';
 
 //Checks no. of neighbours around a particular point
-checkNeighbours(a,i,j,rows,cols)
+int checkNeighbours(a,i,j,rows,cols)
   {
     var count=0; //counts no. of neighbours
     var nr=rows-1; 
@@ -110,10 +110,10 @@ checkNeighbours(a,i,j,rows,cols)
             if(a[i-1][j-1]==1)//top-left
                 count+=1;
             if(a[i+1][j-1]==1) //bottom-left
-                count+=1;                
+                count=1;                
             if(a[i-1][j+1]==1)//top-right
                 count+=1;
-            if(a[i+1][j+1]==1)//bottom-right
+            if(a[i+1][j-1]==1)//bottom-right
                 count+=1;
         }
     }                
@@ -131,21 +131,21 @@ golnewgen(a,b,rows,cols)
             { 
                 var nbr = checkNeighbours(a,i,j,rows,cols);
                 if(nbr == 0 || nbr == 1 || nbr == 4 || nbr == 5 || nbr == 6 || nbr == 7 || nbr == 8)
-                    b[i][j]=0;
+                    a[i][j]=0;
                 else if(nbr == 2 || nbr == 3)
-                    b[i][j]=1;
+                    a[i][j]=1;
             }
             else if(a[i][j]==0)
             {   
                 var nbr = checkNeighbours(a,i,j,rows,cols);
                 if(nbr == 0 || nbr == 2 || nbr == 1 || nbr == 4 || nbr == 5 || nbr == 6 || nbr == 7 || nbr == 8)
-                    b[i][j]=0;
+                    a[i][j]=0;
                 else if(nbr == 3)
-                    b[i][j]=1;
+                    a[i][j]=1;
             } 
           }
         }
-    return b;
+    return a;
   }
 
 //To clear the terminal/command prompt screen
@@ -200,6 +200,61 @@ int checkExtinction(a,rows,cols){
     return 0;  
 }  
 
+void testcode()
+{
+  var test1=[[0,0,0,0,0],
+         [0,0,1,0,0],
+         [0,0,1,0,0],
+         [0,0,1,0,0],
+         [0,0,0,0,0]];
+
+  var test2=[[0,0,0,0,0],
+         [0,0,0,0,0],
+         [0,1,1,1,0],
+         [0,0,0,0,0],
+         [0,0,0,0,0]];
+
+  var gens=4;
+  var testcount=0;
+
+  var a=test1;
+  
+  for(int i =0;i<gens;i+=1)
+  {
+    var randomGenerator = Random();
+    var b=List.generate(5, (m) => List.generate(5, (n) => randomGenerator.nextInt(1)));
+    a=golnewgen(a,b,5,5);
+
+    if(i==0 || i==2)
+    {testcount+=compareMatrix(a,test2);}
+    else
+    {testcount+=compareMatrix(a,test1);}
+
+  }
+
+  if(testcount==4)
+  {print("Test Passed");}
+  else {print("Test NOT Passed");}
+
+}
+
+int compareMatrix(a,b)
+{
+  int unmatched=0;
+  for(int i=0; i<a.length; i+=1)
+  {
+    for(int j=0;j<a[0].length; j+=1)
+    {
+       if(a[i][j]!=b[i][j])
+       {unmatched+=1;}
+    }
+  }
+
+  if(unmatched==0)
+  {return 1;}
+  else{return 0;}
+}
+
 void main(List<String> args) 
 {
   //Getting rows, cols, gens from user command-line arguement
@@ -226,7 +281,7 @@ void main(List<String> args)
     clearScreen();
 
     var x = i+1; 
-    var b = List.generate(rows, (m) => List.generate(cols, (n) => randomGenerator.nextInt(1)));  //Generates an empty matrix of size of rows x cols for storing changed values
+    var b=List.generate(5, (m) => List.generate(5, (n) => randomGenerator.nextInt(1)));
 
     print("Press Ctrl+C to terminate the program.");
     print("");
@@ -243,6 +298,8 @@ void main(List<String> args)
     
   }
   clearScreen();
+
+  testcode();
 }
 
 
