@@ -1,3 +1,5 @@
+https://img.shields.io/travis/tirthpatel7498/Game-of-Life_510_HW-3
+
 # Game-of-Life_510_HW-3
 
 ## Coding the famous Conway's Game-of-Life in 3 Languages! 
