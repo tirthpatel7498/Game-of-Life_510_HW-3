@@ -1,4 +1,4 @@
-https://img.shields.io/travis/tirthpatel7498/Game-of-Life_510_HW-3
+[![Build Status](https://travis-ci.org/tirthpatel7498/Game-of-Life_510_HW-3.png?branch=master)](https://travis-ci.org/tirthpatel7498/Game-of-Life_510_HW-3)
 
 # Game-of-Life_510_HW-3
 
