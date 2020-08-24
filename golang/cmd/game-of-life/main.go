@@ -40,7 +40,7 @@ func generate(currentGeneration int, cols int, rows int, generation []int) []int
 			next[i] = 1
 		} else if generation[i] == 1 && (neighbors > 3 || neighbors < 2) {
 			// over-crowding or lonely - dies
-			next[i] = 0
+			generation[i] = 0
 		} else {
 			next[i] = generation[i]
 		}
