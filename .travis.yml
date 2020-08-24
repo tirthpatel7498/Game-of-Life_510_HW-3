@@ -12,4 +12,4 @@ matrix:
         dart:
             - stable
         script:
-            - pub run test Dart/gol_test.dart    
+            - dart Dart/gol_test.dart    
