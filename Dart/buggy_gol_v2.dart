@@ -200,6 +200,7 @@ int checkExtinction(a,rows,cols){
     return 0;  
 }  
 
+//Tests whether code is logically true or not -- for debugging purposes
 void testcode()
 {
   var test1=[[0,0,0,0,0],
@@ -238,6 +239,7 @@ void testcode()
 
 }
 
+//Checks whether 2 nxn matrices are equal or not
 int compareMatrix(a,b)
 {
   int unmatched=0;
@@ -281,7 +283,7 @@ void main(List<String> args)
     clearScreen();
 
     var x = i+1; 
-    var b=List.generate(5, (m) => List.generate(5, (n) => randomGenerator.nextInt(1)));
+    var b=List.generate(5, (m) => List.generate(5, (n) => randomGenerator.nextInt(1)));  //Generates an empty matrix of size of rows x cols for storing changed values
 
     print("Press Ctrl+C to terminate the program.");
     print("");
