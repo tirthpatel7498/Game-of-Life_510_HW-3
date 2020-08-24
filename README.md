@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/tirthpatel7498/Game-of-Life_510_HW-3.png?branch=master)](https://travis-ci.org/tirthpatel7498/Game-of-Life_510_HW-3)
+[![GitHub issues](https://img.shields.io/github/issues/tirthpatel7498/Game-of-Life_510_HW-3)](https://github.com/tirthpatel7498/Game-of-Life_510_HW-3/issues)
+[![GitHub license](https://img.shields.io/github/license/tirthpatel7498/Game-of-Life_510_HW-3)](https://github.com/tirthpatel7498/Game-of-Life_510_HW-3/blob/master/LICENSE)
+
 # Game-of-Life_510_HW-3
 
 ## Coding the famous Conway's Game-of-Life in 3 Languages! 
