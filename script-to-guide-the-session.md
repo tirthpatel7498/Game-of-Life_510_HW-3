@@ -16,16 +16,9 @@ To begin, we will clone the repository from Github. Use the following command th
 git clone https://github.com/tirthpatel7498/Game-of-Life_510_HW-3
 ```
 
-After cloning (it is advisable to create your separate branch for debugging purposes), cd into the <chosen language> directory and reference the README on how to build and run the program. Each README also contains basic instructions on how to add a debug statement to the console.
+After cloning (it is advisable to create your separate branch for debugging purposes), cd into the <chosen language> directory and reference the `README.md` on how to build and run the program. Each `README.md` also contains basic instructions on how to add a debug statement to the console.
 
-How to run the code:
-	For go, please refer to the `README.md` in the `golang` directory. 
-	For dart, refer to the `README.md` file in the `Dart` directory.
-	For Lua, refer to the `README.md` file in the `Lua` directory.
-
-How to print debug statements:
-	For go, please refer to the `README.md` in the `golang` directory. 
-	
+Feel free to ask you facilitator about any questions you might have.
 
 ### Feedback
 Now that you have completed our experiment, please complete this self-survey about your thoughts using this language.
