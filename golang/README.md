@@ -2,6 +2,9 @@
 
 This is a simple implementation of the Game of Life in go. 
 
+## Online
+If you want to use an online IDE, you can use [repl.it](https://repl.it/@dangoslen/EnormousMadeupProfiles) to see the code. When you edit the repl, it will create a new one for you.
+
 ## Building
 
 You need to have `go` installed on your computer. See [go installation](https://golang.org/dl/) for help on your specific computer. 
