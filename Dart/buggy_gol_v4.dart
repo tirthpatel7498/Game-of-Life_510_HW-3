@@ -129,18 +129,18 @@ golnewgen(a,b,rows,cols)
           {
             if(a[i][j]==1)
             { 
-                var nbr = checkNeighbours(a,i,j,rows,cols);
-                if(nbr == 0 || nbr == 1 || nbr == 4 || nbr == 5 || nbr == 6 || nbr == 7 || nbr == 8)
+                var neighbours = checkNeighbours(a,i,j,rows,cols);
+                if(neighbours == 0 || neighbours == 1 || neighbours == 4 || neighbours == 5 || neighbours == 6 || neighbours == 7 || neighbours == 8)
                     a[i][j]=0;
-                else if(nbr == 2 || nbr == 3)
+                else if(neighbours == 2 || neighbours == 3)
                     a[i][j]=1;
             }
             else if(a[i][j]==0)
             {   
-                var nbr = checkNeighbours(a,i,j,rows,cols);
-                if(nbr == 0 || nbr == 2 || nbr == 1 || nbr == 4 || nbr == 5 || nbr == 6 || nbr == 7 || nbr == 8)
+                var neighbours = checkNeighbours(a,i,j,rows,cols);
+                if(neighbours == 0 || neighbours == 2 || neighbours == 1 || neighbours == 4 || neighbours == 5 || neighbours == 6 || neighbours == 7 || neighbours == 8)
                     a[i][j]=0;
-                else if(nbr == 3)
+                else if(neighbours == 3)
                     a[i][j]=1;
             } 
           }
@@ -148,18 +148,7 @@ golnewgen(a,b,rows,cols)
     return a;
   }
 
-//To clear the terminal/command prompt screen
-void clearScreen() 
-{
-  if(Platform.isWindows) {
-    // not tested, I don't have Windows
-    // may not to work because 'cls' is an internal command of the Windows shell
-    // not an executeable
-    print(Process.runSync("cls", [], runInShell: true).stdout); 
-  } else {
-    print(Process.runSync("clear", [], runInShell: true).stdout);
-  }
-}
+
 
 //For printing the matrix in the form of design of 'o'
 void printDesign(a,rows,cols)
@@ -198,7 +187,7 @@ int checkExtinction(a,rows,cols){
       }
     }
     return 0;  
-}  
+}
 
 //Tests whether code is logically true or not -- for debugging purposes
 void testcode()
@@ -257,49 +246,39 @@ int compareMatrix(a,b)
   else{return 0;}
 }
 
-void main(List<String> args) 
+void main() 
 {
-  //Getting rows, cols, gens from user command-line arguement
-  var rows=int.parse(args[0]); var cols=int.parse(args[1]); var gens=int.parse(args[2]);
+  //Getting rows, cols, gens for the game board 
+  var rows=5; var cols=5; var gens=5;
 
   var randomGenerator = Random();
-  Duration sleeptimer = new Duration(hours:0, minutes:0, seconds:2);
 
   //Generate a matrix of prespecified rows & cols with random population
   var a = List.generate(rows, (i) => List.generate(cols, (j) => randomGenerator.nextInt(2)));
 
   //Printing the initial population
-  clearScreen();       
-  print("Press Ctrl+C to terminate the program.");
+
   print("");
   print("Initial population");
   printDesign(a,rows,cols);
-  sleep(sleeptimer); 
   
   //Iterating through generations
   for(int i = 0; i<gens; i+=1)
   {  
 
-    clearScreen();
+    var temp = i+1; 
+    var b = List.generate(rows, (m) => List.generate(cols, (n) => randomGenerator.nextInt(1)));  //Generates an empty matrix of size of rows x cols for storing changed values
 
-    var x = i+1; 
-    var b=List.generate(5, (m) => List.generate(5, (n) => randomGenerator.nextInt(1)));  //Generates an empty matrix of size of rows x cols for storing changed values
-
-    print("Press Ctrl+C to terminate the program.");
     print("");
-    print("generation "+ x.toString()+"");
+    print("generation "+ temp.toString()+"");
     
     a=golnewgen(a,b,rows,cols); //Getting new generation from golnewgen method.
     
     printDesign(a,rows,cols);   //Printing new gen
 
-    if(checkExtinction(a,rows,cols)==1){} //A check whether the population has gone extinct before the generation loop terminates or not.
-    else{ print(""); print("The population has gone extinct. Terminating the program."); sleep(sleeptimer); break;}
-    //print(a);
-    sleep(sleeptimer);
-    
+    if(checkExtinction(a,rows,cols)==1){print("");} //A check whether the population has gone extinct before the generation loop terminates or not.
+    else{ print(""); print("The population has gone extinct. Terminating the program."); break;}
   }
-  clearScreen();
 
   testcode();
 }

@@ -1,9 +1,10 @@
+
 # Coding the famous Conway's Game-of-Life in Dart Language! 
 
-# Introduction
+# 1. Introduction
 Conway's Game of Life is a cellular automaton game. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.
 
-## Rules of Game
+## 2. Rules of Game
 The game starts with a random initial population, which will further evolve on its own(requiring no further input) into new generation by following the rules mentioned below, and the process goes on either for infinity or becomes extinct after some generations.
 
      C   N                 new C
@@ -14,41 +15,56 @@ The game starts with a random initial population, which will further evolve on i
      0   0,1,2,4,5,6,7,8 ->  0  // Barren
 
 
-## Output of Code
+## 3. Output of Code
 
 ![Output of original codes](output.gif)
 
-## Dart Installation
+## 4. Debugging
 
+### 4.1 Debugging using online dart compiler
+
+#### 4.1.1 Guidelines
+For debugging purposes,
+
+1. You will find the buggy_gol_v4.dart file in this link, which is the buggy implementation of Game of Life.
+2. Make changes as per requirement or debug it and then run the file.
+3. If "Test Passed" is displayed at the end of the execution in Terminal/CMD, Congrats! you have successfully debugged this file. If not, please try again.
+
+#### 4.1.2 Link
+Link to debug the buggy_gol_v4.dart file in the online compiler: [Click here](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart) 
+
+### 4.2 Debugging using your own computer
+
+#### 4.2.1 Installation
 [Dart SDK Installation Guide](https://dart.dev/get-dart)
 
-## Usage
+#### 4.2.2 Usage
 After complete installation of Dart SDK,
 
 Open terminal or command-prompt, navigate to the Dart directory and run the following command with proper arguements,
 	
-    $ dart gol_v2.dart <rows> <columns> <generations>
-eg. For a game board of 5x5 for 5 generations,
+    $ dart <filename>.dart 
+For eg.
+    $ dart buggy_gol_v4.dart  
+    (By default rows=5, columns=5, generations=5. If you want to change these values, you can change them inside the code. )
 
-    $ dart gol_v2.dart 5 5 5    
-
-## Sample Output
-![Output of original codes](output.gif)
-
-## Debugging Guidelines
+#### 4.2.3 Guidelines
 For debugging purposes,
 
 1. Install Dart SDK as per above guidelines.
 2. Clone this GitHub repo and navigate to the **Dart** directory.
-3. You will find the buggy_gol_v2.dart file in it, which is the buggy implementation of Game of Life.
+3. You will find the buggy_gol_v4.dart file in it, which is the buggy implementation of Game of Life.
 4. Make changes as per requirement or debug it and then run the file as per above **Usage** instructions.
 5. If "Test Passed" is displayed at the end of the execution in Terminal/CMD, Congrats! you have successfully debugged this file. If not, please try again.
 
 
+## 5. Sample Output
+![Output of original codes](output.gif)
 
-## Making Contributions
+
+## 6. Making Contributions
 Please ensure you are abiding by our Code of Conduct and Contribution guidelines when making contributions to this repository.
 
-## Contact
+## 7. Contact
 Contact me at this email for any queries:
-hmkachha@ncsu.edu
+Harsh Kachhadia - hmkachha@ncsu.edu
