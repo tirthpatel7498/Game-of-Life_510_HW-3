@@ -31,7 +31,7 @@ For debugging purposes,
 3. If "Test Passed" is displayed at the end of the execution in Terminal/CMD, Congrats! you have successfully debugged this file. If not, please try again.
 
 #### 4.1.2 Link
-[Click here](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart) to debug the buggy_gol_v4.dart file in the online compiler: 
+Link to debug the buggy_gol_v4.dart file in the online compiler: [Click here](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart) 
 
 ### 4.3 Debugging using your own computer
 
