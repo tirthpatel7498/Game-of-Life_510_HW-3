@@ -1,7 +1,7 @@
 This file deals with the usage of the Lua code written for the Game of Life.
 To run the lua code on your computer, you will need to first install Lua.
 
-## NOTE - This file is the buggy version of the game. It has been intentionally made buggy for the purpose of the experiment.
+Note - This file is the buggy version of the game. It has been intentionally made buggy for the purpose of the experiment.
 
 ## For macOS and Linux
 If using macOS or Linux, the best way is to use `HOMEBREW`
