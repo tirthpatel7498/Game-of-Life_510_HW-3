@@ -20,18 +20,18 @@ The game starts with a random initial population, which will further evolve on i
 ![Output of original codes](output.gif)
 
 ## 4. Debugging
-### 4.1 Guidelines
+
+### 4.1 Debugging using online dart compiler
+
+#### 4.1.1 Guidelines
 For debugging purposes,
 
-1. Install Dart SDK as per above guidelines.
-2. Clone this GitHub repo and navigate to the **Dart** directory.
-3. You will find the buggy_gol_v2.dart file in it, which is the buggy implementation of Game of Life.
-4. Make changes as per requirement or debug it and then run the file as per above **Usage** instructions.
-5. If "Test Passed" is displayed at the end of the execution in Terminal/CMD, Congrats! you have successfully debugged this file. If not, please try again.
+1. You will find the buggy_gol_v4.dart file in this link, which is the buggy implementation of Game of Life.
+2. Make changes as per requirement or debug it and then run the file.
+3. If "Test Passed" is displayed at the end of the execution in Terminal/CMD, Congrats! you have successfully debugged this file. If not, please try again.
 
-
-### 4.2 Debugging using online dart compiler
-[Click here]([https://repl.it/@harshkachhadia/DartGameOfLife#main.dart](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart)) to debug the buggy_gol_v4.dart file in the online compiler: 
+#### 4.1.2 Link
+[Click here](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart) to debug the buggy_gol_v4.dart file in the online compiler: 
 
 ### 4.3 Debugging using your own computer
 
@@ -47,6 +47,16 @@ Open terminal or command-prompt, navigate to the Dart directory and run the foll
 For eg.
     $ dart buggy_gol_v4.dart  
     (By default rows=5, columns=5, generations=5. If you want to change these values, you can change them inside the code. )
+
+#### 4.3.3 Guidelines
+For debugging purposes,
+
+1. Install Dart SDK as per above guidelines.
+2. Clone this GitHub repo and navigate to the **Dart** directory.
+3. You will find the buggy_gol_v4.dart file in it, which is the buggy implementation of Game of Life.
+4. Make changes as per requirement or debug it and then run the file as per above **Usage** instructions.
+5. If "Test Passed" is displayed at the end of the execution in Terminal/CMD, Congrats! you have successfully debugged this file. If not, please try again.
+
 
 ## 5. Sample Output
 ![Output of original codes](output.gif)
