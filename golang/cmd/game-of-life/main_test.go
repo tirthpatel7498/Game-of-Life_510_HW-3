@@ -38,5 +38,5 @@ func TestOneNeighbor(t *testing.T) {
 	generation[7+5] = 1
 	neighbors := neighbors(cols, generation, 7)
 
-	assert.Equal(t, neighbors, 1, "The first cell has no alive neighbors")
+	assert.Equal(t, neighbors, 0, "The first cell has no alive neighbors")
 }
