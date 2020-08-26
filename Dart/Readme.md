@@ -33,12 +33,12 @@ For debugging purposes,
 #### 4.1.2 Link
 Link to debug the buggy_gol_v4.dart file in the online compiler: [Click here](https://repl.it/@harshkachhadia/DartGameOfLife#main.dart) 
 
-### 4.3 Debugging using your own computer
+### 4.2 Debugging using your own computer
 
-#### 4.3.1 Installation
+#### 4.2.1 Installation
 [Dart SDK Installation Guide](https://dart.dev/get-dart)
 
-#### 4.3.2 Usage
+#### 4.2.2 Usage
 After complete installation of Dart SDK,
 
 Open terminal or command-prompt, navigate to the Dart directory and run the following command with proper arguements,
@@ -48,7 +48,7 @@ For eg.
     $ dart buggy_gol_v4.dart  
     (By default rows=5, columns=5, generations=5. If you want to change these values, you can change them inside the code. )
 
-#### 4.3.3 Guidelines
+#### 4.2.3 Guidelines
 For debugging purposes,
 
 1. Install Dart SDK as per above guidelines.
