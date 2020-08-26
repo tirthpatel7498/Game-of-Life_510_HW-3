@@ -51,7 +51,7 @@ func generate(currentGeneration int, cols int, rows int, generation []int) []int
 func neighbors(cols int, generation []int, i int) int {
 	c := cols + 2
 	// Find neighbors starting to left to bottom right
-	return (generation[i-c-1] + generation[i-c] + generation[i-c+1] + generation[i-1] + generation[i+1] + generation[i+c-1] + generation[i+c] + generation[i+c+1])
+	return (generation[i-c-1] + generation[i-c] + generation[i-c+1] + generation[i-1] + generation[i+1] + generation[i+c-1] + generation[i+c+1])
 }
 
 // Our generation "matrix" has additional rows and columns to make computing neighbors easier. Therefore, we do not count
