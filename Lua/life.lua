@@ -53,8 +53,8 @@ do
         for i = 1, self.r do
 			for j = 1, self.c do
 				local numOfNeighbors = 0
-				for r1 = i,i+1 do --
-					for c1 = j,j+1 do --
+				for r1 = i,i+1 do 
+					for c1 = j,j+1 do 
 						if r1 <= self.r and c1 > 0 and c1 <= self.c then --
 							numOfNeighbors = numOfNeighbors + self.table[r1][c1]
 						end
@@ -74,7 +74,7 @@ do
 				
 			end
         end
-        --
+        
     end    
 
 
