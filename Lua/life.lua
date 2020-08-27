@@ -62,11 +62,16 @@ do
 				end
 				-- remove the current cell from numOfNeighbors
 				numOfNeighbors = numOfNeighbors - self.table[i][j]
-				if numOfNeighbors == 3 or (numOfNeighbors+self.table[i][j]) == 2 then
-					table2[i][j] = 1 --1 represents live cell
+				if self.table[i][j] == 1 then
+					if numOfNeighbors < 2 and numOfNeighbors > 3 then
+						table2[i][j] = 0
+					end
 				else
-					table2[i][j] = 0 --0 represents dead cell
+					if numOfNeighbor == 3 then
+						table2[i][j] = 1
+					end
 				end
+				
 			end
         end
         --
