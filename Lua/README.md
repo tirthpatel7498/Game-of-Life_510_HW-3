@@ -19,5 +19,8 @@ Once install, simply paste the code below to install Lua<br />
 2. In terminal/cmd, go to the directory where you have saved the project.
 3. To run the .lua file, type `lua life.lua`
 
+## Online Compiler
+Click the link to go to the online complier for Lua https://repl.it/@TirthPatel6/GameofLife#main.lua
+
 ## Contact
 Contact me at tdpatel2@ncsu.edu for any queries
