@@ -24,12 +24,19 @@ We utilized a [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfKlXzNkoM3
 * How long did it take you to fix the bug?
 * Other Comments(text box for comments outside the above questions.)
 
-We also shared a Google Doc with each experimenters observations from the Zoom screen sharing session. We used this to note any common difficulties that would not be captured by our form.
+We also had a shared Google Doc where each facilitator can writeup their observations from the Zoom screen sharing session. We also used this to note any common difficulties that would not be captured by our form.
 
 ## Observations
+1. Prior programming experience with a similar language aids a programmer in debugging an uncommon language with respect to language syntaxes and rules.
+2. Debugging was comparatively easier for participants who had coded Game of Life in some other language familier to them.(makes thier logic clear)
+3. Participants faced less difficulties in debugging codes that contained meaningful variable naming and comments all over the code.
+
 
 
 ## Conclusions
+1. It is easy to learn a new language, if you have previously worked with some language following same programming paradigm.
+2. Prior understanding of flow and logic of the program has proved out to be a necessary condition before starting code debugging.
+3. Proper variable naming convention and documentation of code with comments aids an external person a lot, while debugging or understanding the code.
 
 
 ## Threats to Validity
