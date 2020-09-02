@@ -10,7 +10,7 @@ While we initially were expecting our participants to download our repository, w
 
 ## Materials
 
-We utilized [repl.it](https://repl.it) to conduct our experiment. We used this online IDEfor each participant. 
+We utilized [repl.it](https://repl.it) to conduct our experiment. We used this online IDE for each participant. 
 
 We utilized a [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfKlXzNkoM31rRwZGDyyQHUqQ2LaqsOaHLS6QvlwOjfFOeHuQ/viewform) for capturing user feedback. The following responses were taken:
 * Token Number?
