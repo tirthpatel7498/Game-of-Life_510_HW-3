@@ -1,6 +1,6 @@
 # Experiment Conclusions
 
-Our data and visualizations can be seen at this Google Sheet. Some visualizations and summaries are provided inline below.
+Our data and visualizations can be seen at this [Google Sheet](https://docs.google.com/spreadsheets/d/1kz9Hj8m2nxQ8EtbHXal9YjH7S8xjFteBVq4-f7mumaY/edit?usp=sharing). Some visualizations and summaries are provided inline below.
 
 ## Methods
 
