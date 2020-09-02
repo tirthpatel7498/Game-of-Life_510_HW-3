@@ -10,7 +10,7 @@ While we initially were expecting our participants to download our repository, w
 
 ## Materials
 
-We utilized a [script](../script-to-guide-the-session.md) to guide our experiemtn. We followed this script for each participant. 
+We utilized a [script](../script-to-guide-the-session.md) to guide our experiment. We followed this script for each participant. 
 
 We utilized a [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfKlXzNkoM31rRwZGDyyQHUqQ2LaqsOaHLS6QvlwOjfFOeHuQ/viewform) for capturing user feedback. The following responses were taken:
 * Token Number?
@@ -27,6 +27,7 @@ We utilized a [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfKlXzNkoM3
 We also had a shared Google Doc where each facilitator can writeup their observations from the Zoom screen sharing session. We also used this to note any common difficulties that would not be captured by our form.
 
 ## Observations
+
 1. Prior programming experience with a similar language aids a programmer in debugging an uncommon language with respect to language syntaxes and rules.
 2. Debugging was comparatively easier for participants who had coded Game of Life in some other language familier to them.(makes thier logic clear)
 3. Participants faced less difficulties in debugging codes that contained meaningful variable naming and comments all over the code.
@@ -34,6 +35,7 @@ We also had a shared Google Doc where each facilitator can writeup their observa
 
 
 ## Conclusions
+
 1. It is easy to learn a new language, if you have previously worked with some language following same programming paradigm.
 2. Prior understanding of flow and logic of the program has proved out to be a necessary condition before starting code debugging.
 3. Proper variable naming convention and documentation of code with comments aids an external person a lot, while debugging or understanding the code.
@@ -43,7 +45,7 @@ We also had a shared Google Doc where each facilitator can writeup their observa
 
 Our threats to validity can be summarized in a few key points
 
-* We did not ask for a pre-experiment survey to assert the participants experience with any or our langugages.
+* We did not ask for a pre-experiment survey to assert the participants experience with any of our langugages.
 
 This could lead to participants saying they had not used a language, but in fact had. This would skew our results.
 
@@ -59,6 +61,10 @@ We relied on user feedback and our observations to identify that amount of time 
 
 We had a handful of learnings from conducting this experiment
 
+- **Use pre-experiment survey to understand knowledge of participant with respect to any of our languages**
+
+  Learning from the problems mentioned in "Threats to validity" section relating to this topic, we found that we can utilize pre-experiment tests to assess 2 things about the participant: 1. This will help us measure how participant's experience with a similar language aided the undrstanding of one of our languages 2. Measure how bug solving effort changes with prior experience of that participant in a similar language.
+
 - **Use Tests to Help Participants Know They Have Fixed a Bug**
 
   Our participants had a hard time knowing if they had solved the bug. While we had tests in our repository, we should have written negative tests cases that were intentionally failing in a hosted coding environment like [repl.it](https://repl.it). This would have made it easier for participants to find logical errors in our implemenations. 
@@ -69,5 +75,13 @@ We had a handful of learnings from conducting this experiment
 
 - **Use Different Types of Bugs**
 
-  We used only logical bugs instead of compilation bugs, mainly because we wanted our participants to use our repository. Something like [repl.it](https://repl.it) would have made this easier.
+  We used only logical bugs instead of compilation bugs, mainly because we wanted our participants to use our repository. Something like [repl.it](https://repl.it) would have made this easier. 
+
+- **We came across some new data collection tools that we can use for the final experiment**
+
+1. Pre-experiment tests.
+2. Comparing 3 languages based on how interesting the participant found this new language to learn.
+3. Get input from the participant about how would they rate the difficulty level(either {easy, medium, hard} or a scale of 1-5) of bugs in our codes.
+4. Get input from the user about what was the biggest hindrance that they faced while debugging the codes.  
+
 
