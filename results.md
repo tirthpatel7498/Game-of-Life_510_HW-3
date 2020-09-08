@@ -28,6 +28,8 @@ We also had a shared Google Doc where each facilitator can writeup their observa
 
 ## Observations
 
+![](images/Image1.png)
+
 1. From the graph we see that the average ease of running a language was the highest for Dart followed by Lua and then Golang.
 2. From the graph we see that the confidence of the user that a bug was fixed was the highest for Lua followed by Golang and then Dart.
 3. From the graph we see that the people debugging the code found Dart to be easiest followed by Golang and then Lua.
