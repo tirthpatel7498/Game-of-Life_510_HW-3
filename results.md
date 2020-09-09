@@ -28,6 +28,8 @@ We also had a shared Google Doc where each facilitator can writeup their observa
 
 ## Observations
 
+![](images/Image4.png)
+
 ![](images/Image2.png)
 
 ![](images/Image1.png)
